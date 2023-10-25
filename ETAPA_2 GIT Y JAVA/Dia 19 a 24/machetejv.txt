@@ -1,0 +1,57 @@
+/*: abrir bloque de comentario
+
+*/:cerrar bloque de comentario
+
+//:comentario breve
+
+System.out.println():imprimir en pantalla
+
+package:PAQUETE
+(PAQUETES=CARPETAS)(PAQUETES:CONTIENEN DENTRO CARPETAS QUE SERIAN LAS CLASES)
+
+class:da nombre a nuestra clase
+
+main:subprograma que es el primero en ser llamado al invocar un programa java
+
+metodo: es lo mismo que una funcion o un procedimiento solo que, es la manera de
+nombrar a los susprogramas que se codifixan dentro de una clase
+
+string: cadena de caracteres
+
+IMPORTANTE: TODA LINEA DE INSTRUCCION EN JAVA TERMINA CON ";"
+
+scanner:es una funcion que emula el comportamiento de la funcion LEER en pseint
+
+Glosario de Java
+String -----> Cadena (multiple characters)
+byte  -----> Entero (From +127 to -128)
+short -----> Entero (From +32,768 to -32,767)
+int -----> Entero (From  2,147,483,647 to -2,147,483,648)
+
+long -----> Entero (From +9,223,372,036,854,775,807 to -9,223,372,036,854,775,808)
+float -----> Reales (From 3.402,823,5 E+38 to 1.4 E-45)
+double -----> Reales (From 1.797,693,134,862,315,7 E+308 to 4.9 E-324)
+boolean -----> Logico (true-false)
+
+if ----> Si
+else ----> SiNo
+switch ----> Segun
+while ----> Mientras
+do - While ----> Hacer - Mientras Que
+for ----> Para
+
+Operadores lógicos
+&& ----> Y (evalúa todas las condiciones)
+& = Y (evalúa hasta que encuentre un falso)
+|| = O (evalúa todas las condiciones)
+| = O  (evalúa hasta que encuentre un verdadero)
+== igual para comparación
+= igual de asignación
+! negación
+!= desigual
+
+Operadores aritméticos
+suma = x+y;
+resta = x-y;
+multiplicación = x*y;
+división = x/y;

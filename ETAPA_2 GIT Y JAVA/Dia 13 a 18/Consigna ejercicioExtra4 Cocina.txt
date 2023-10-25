@@ -1,0 +1,10 @@
+Clase cocina 
+-array de objetos de tipo "Receta"
+
+Clase Receta
+-String nombre
+-array de String "Ingredientes"
+
+Metodos:
+-buscar por nombre esa receta, retornar la receta con sus ingredientes
+-el usuario ingresa uno o mas ingredientes y debemos devolver las recetas que se pueden realizar con esos ingredientes

@@ -1,0 +1,27 @@
+table , th, td{
+    text-align: center;
+    border: 1px solid #333;
+    border-collapse: collapse;
+}
+
+table {
+    font-family: Arial;
+}
+
+.acciones {
+    border-spacing: px;
+    background-image: url("imagenes/fondo_gris.gif");
+}
+
+.divisas th{
+   text-align: left;
+   background-color: #E6F3FF;
+}
+
+.fondo-alterno td{
+    background-color: #FFFFCC;
+}
+
+.ancho {
+    width: 4rem;
+}

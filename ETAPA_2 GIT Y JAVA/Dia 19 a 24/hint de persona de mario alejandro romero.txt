@@ -1,0 +1,7 @@
+Persona p[] = new Persona[4];
+
+for (int i = 0; i < p.length; i++) {
+            Persona persona = p[i];
+            p[i]=pserv.crearPersona();
+            System.out.println(p[i].getNombre()+ " Es mayor de edad? "+pserv.esMayor(p[i]));
+        }

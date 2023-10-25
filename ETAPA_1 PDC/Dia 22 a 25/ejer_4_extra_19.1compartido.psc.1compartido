@@ -1,0 +1,89 @@
+Algoritmo ejer_4_extra_19
+	
+	Definir l, matriz_1,matriz_2,matriz_3,cont,i,j,k,suma Como Entero
+	Dimension matriz_1(3,3),matriz_2(3,3),matriz_3(3,3)
+	
+	Para i=0 Hasta 2 Hacer
+		para j=0 Hasta 2 Hacer
+			matriz_1(i,j)=Aleatorio(1,9)
+			matriz_2(i,j)=Aleatorio(1,9)
+			matriz_3(i,j)=0
+		FinPara
+	FinPara
+	Escribir " -----------------matriz_1---------------"
+	cont=0
+	para i=0 Hasta 2 Hacer
+		para j=0 Hasta 2 Hacer
+			cont=cont+1
+			si cont<=3 Entonces
+				Escribir Sin Saltar " ",matriz_1(i,j)
+			SiNo
+				Escribir ""
+				Escribir Sin Saltar " ",matriz_1(i,j)
+				cont=1
+			FinSi
+			
+			
+		FinPara
+	FinPara
+	Escribir " "
+	Escribir " "
+	Escribir " -----------------matriz_2---------------"
+	cont=0
+	para i=0 Hasta 2 Hacer
+		para j=0 Hasta 2 Hacer
+			cont=cont+1
+			si cont<=3 Entonces
+				Escribir Sin Saltar " ",matriz_2(i,j)
+			SiNo
+				Escribir ""
+				Escribir Sin Saltar " ",matriz_2(i,j)
+				cont=1
+			FinSi
+			
+			
+		FinPara
+	FinPara
+	Escribir " "
+	Escribir " "
+	
+	
+	Escribir " matriz_1 * matriz_2 =matriz_3 "
+	Escribir " "
+	suma=0
+	para j=0 Hasta 2 Hacer
+		para i=0 Hasta 2 Hacer
+			para k=0 Hasta 2 Hacer
+				matriz_3(i,j)=matriz_3(i,j)+( matriz_1(i,k)*matriz_2(k,j))
+			FinPara
+		FinPara
+	FinPara
+	
+	Escribir " -----------------matriz_3---------------"
+	cont=0
+	para i=0 Hasta 2 Hacer
+		para j=0 Hasta 2 Hacer
+			cont=cont+1
+			si cont<=3 Entonces
+				Escribir Sin Saltar " ",matriz_3(i,j)
+			SiNo
+				Escribir ""
+				Escribir Sin Saltar " ",matriz_3(i,j)
+				cont=1
+			FinSi
+			
+			
+		FinPara
+	FinPara
+	Escribir " "
+	Escribir " "
+	//	matriz_3(0,0)=matriz_3_suma(0,0)+matriz_3_suma(0,1)+matriz_3_suma(0,2)
+	//	matriz_3(0,1)=matriz_3_suma(1,0)+matriz_3_suma(1,1)+matriz_3_suma(1,2)
+	//	matriz_3(0,2)=matriz_3_suma(2,0)+matriz_3_suma(2,1)+matriz_3_suma(2,2)
+	
+	
+	
+	
+	
+	
+FinAlgoritmo

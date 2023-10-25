@@ -1,0 +1,27 @@
+main
+
+PersonaServicio P2 = new PersonaServicio();
+        Persona P3 = P2.CrearPersonas();
+        P2.Mostrar(P3);
+    }
+
+private String nombre;
+    private int edad;
+    private int dni;
+
+public Persona CrearPersonas(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Ingrese Nombre");
+        String nombre=input.next();
+        System.out.println("Ingrese Edad");
+        int edad = input.nextInt();
+        System.out.println("Ingrese  DNI");
+        int dni=input.nextInt();
+        return new Persona(nombre,edad,dni);
+       
+    }
+    public void Mostrar(Persona P1){
+        System.out.println(P1.getNombre());
+        System.out.println(P1.getDNI());
+        System.out.println(P1.getEdad());
+    }

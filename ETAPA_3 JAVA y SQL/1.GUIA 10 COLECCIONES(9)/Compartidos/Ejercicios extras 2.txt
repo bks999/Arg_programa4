@@ -1,0 +1,138 @@
+﻿1) Crear la clase “Tarea” con los siguientes atributos título, descripción, estado (boolean) y fecha de creación. Agregar constructor vacío, con parámetros, getters, setters y demás necesario.
+Dentro del servicio vamos a crear un objeto de tipo Tarea pidiendole los datos al usuario.Por defecto, al crear una tarea se tiene que asignar el valor de true al atributo estado, esto indicará que la tarea está en proceso.
+Posteriormente, guardamos el objeto dentro de un conjunto de Tareas, para evitar duplicados.
+Luego debemos:
+-Mostrar todas las tareas
+- Buscar una tarea por su nombre. El usuario debe ingresar el nombre de la tarea a buscar y se debe mostrar el objeto completo.
+- Modificar el estado de la tarea a false, de esta forma se considera terminada. El usuario debe ingresar el nombre de la tarea a modificar.
+- Remover una tarea. El usuario debe ingresar el nombre de la tarea a remover.
+
+2) Crear la clase "Pedido" con los siguientes atributos número de orden, descripción y fecha de creación. Agregar constructor vacío, con parámetros, getters, setters y demás necesario.
+Dentro del servicio vamos a crear un método para la creación del objeto Pedido, solicitando los datos al usuario. Dichos objetos creados, los vamos a guardar dentro de una lista de Pedidos.
+
+Luego debemos:
+- Buscar un pedido según el número de orden y mostarlo.
+- Buscar un pedido según una fecha ingresada por el usuario y mostarlo. En el caso de que no existen pedidos con esa fecha, debe informar al usuario.
+- Mostrar todos los pedidos
+- Ordenar los pedidos por fecha de creación y mostrarlos
+- Remover los 3 primeros pedidos de la lista
+
+Utilizar un switch para que el usuario elija la opción que desea:
+1)Agregar Pedido
+2)Buscar un Pedido por número de orden
+3)Buscar un Pedido por fecha de creación
+4)Mostrar todos los pedidos
+5)Ordenar y mostrar los pedidos según fecha de creación
+6)Remover un Pedido de la lista
+
+
+package servicio;
+
+import entidad.Tarea;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Locale;
+import java.util.Scanner;
+import java.util.Set;
+
+public class tareaServicio {
+    
+    Scanner leer = new Scanner(System.in, "ISO-8859-1").useDelimiter("\n").useLocale(Locale.US);
+    Set<Tarea> check = new HashSet<Tarea>();//set+tab  map+tap=map
+
+    public void cargarTareas() {
+        Tarea tr = new Tarea();             //n+tab instanciar un objeto  (use el constructor vacio)
+        System.out.println("Ingrese el Título de la tarea");
+        tr.setTítulo(leer.next().toLowerCase());
+        System.out.println("Describa brevemente la tarea");
+        tr.setDescripcion(leer.next().toLowerCase());
+        tr.setEstado(true);
+        tr.setFechaCreacion(new Date());//pongo la fecha de hoy
+        check.add(tr);
+    }
+    
+    public void mostrarTareas() {
+        check.forEach((e) -> System.out.print(e + "\n"));
+        
+    }
+    
+    public boolean buscarTarea(String buscameEsto) {
+        boolean bandera = false;
+        for (Tarea buscar : check) {
+            if (buscar.getTítulo().equals(buscameEsto)) {
+                System.out.println(buscar);
+                bandera = true;
+            }
+        }
+        return bandera;
+    }
+    
+    public void tareaTerminada(String buscame) {
+        if (buscarTarea(buscame)) {
+            System.out.println("Felicitaciones terminaste esa tarea");
+            for (Tarea t1 : check) {
+                if (t1.getTítulo().equals(buscame)) {
+                    t1.setEstado(false);
+                    
+                }
+            }
+            
+        } else {
+            System.out.println("No esta che");
+            
+        }
+    }
+    
+    public void removerTarea(String buscamelo) {
+        if (buscarTarea(buscamelo)) {
+            
+            for (Tarea t1 : check) {
+                if (t1.getTítulo().equals(buscamelo)) {
+                    check.remove(t1);
+                }
+            }
+        } else {
+            System.out.println("No esta che");
+        }
+    }
+
+    public void Menu() {
+        int opc=0;
+        do{
+        System.out.println("MENU \n1-Cargar Tareas \n"
+                + "2- Mostrar tareas\n"
+                + "3-Buscar Tarea\n"
+                + "4-modificar estado de una Tarea\n"
+                + "5- Borrar una Tarea\n"
+                + "6 -Salir \n"
+                + "Elija una opcion");
+        opc = leer.nextInt();
+        switch (opc) {
+            case 1:
+                cargarTareas();
+                break;
+            case 2:
+                mostrarTareas();
+                break;
+            case 3:
+                System.out.println("Decime qué te busco");
+                String buscameEsto = leer.next().toLowerCase();
+                buscarTarea(buscameEsto);
+                break;
+            case 4: 
+                System.out.println("Que tarea es la terminaste rey...");
+                String buscame= leer.next().toLowerCase();
+                tareaTerminada(buscame);
+                break;
+            case 5:
+                System.out.println("¿Qué tarea quieres eliminar?");
+                String buscamelo=leer.next().toLowerCase();
+                removerTarea(buscamelo);
+                break;
+            default:
+                throw new AssertionError();
+        }
+            System.out.println("");
+   
+        }while(opc!=6);
+                }

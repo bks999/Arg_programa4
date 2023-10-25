@@ -1,0 +1,31 @@
+.lista1 {
+    list-style-type: none;
+}
+
+.lista1 li::before {
+    content: "❤ ";
+    color: red;
+}
+.lista2 :active {
+    color: green;
+}
+
+.lista2 :visited {
+    color: darkblue;
+}
+
+.lista2 :hover {
+    color: violet;
+}
+
+.lista2 :link {
+    color: crimson;
+}
+
+ul {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 2em;
+}

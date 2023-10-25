@@ -1,0 +1,100 @@
+
+public class BancoService {
+
+    private Scanner ingreso = new Scanner(System.in);
+    
+    public Banco crearCuenta(){
+        System.out.println("Ingrese numero de cuenta: ");
+        int numCuenta = ingreso.nextInt();
+        System.out.println("Ingrese numero de DNI: ");
+        long dni = ingreso.nextLong();
+        System.out.println("Ingrese saldo de la cuenta: ");
+        Double saldo = ingreso.nextDouble();
+        return new Banco(numCuenta,dni,saldo);
+    }
+    
+    public void ingresarSaldo(Banco b1,Double saldo){
+        b1.setSaldoActual(b1.getSaldoActual()+saldo);
+    }
+    
+    public void retirarSaldo(Banco b1, Double saldo){
+        
+        if(b1.getSaldoActual() > saldo && b1.getSaldoActual() - saldo > 0){
+            b1.setSaldoActual(b1.getSaldoActual()-saldo);
+            System.out.println("Usted esta retirando(IF): "+ saldo);
+        }else{
+            System.out.println("Usted esta retirando(E): " + b1.getSaldoActual());
+            b1.setSaldoActual(0);
+        }   
+    }
+    
+    public void extraccionRapida(Banco b1, Double saldo){
+        if(saldo <= b1.getSaldoActual()*0.8 ){
+            System.out.println("Usted esta retirando(IF): " + saldo);
+        }else{
+            System.out.println("Extraccion rapida de 20% o menos.");
+        }
+    }
+    
+    public void consultarSaldo(Banco b1){
+        System.out.println("Su saldo actual es: " + b1.getSaldoActual());
+    }
+    
+    public void consultarDatos(Banco b1){
+        System.out.println(b1);
+    }
+    
+}
+
+
+*******************************************************************************
+package POODos.Entidades;
+
+
+public class Banco {
+    
+    private int numeroCuenta;
+    private long dniCLiente;
+    private double saldoActual;
+
+    public Banco() {
+    }
+    
+    
+    public Banco(int numeroCuenta, long dniCLiente, double saldoActual) {
+        this.numeroCuenta = numeroCuenta;
+        this.dniCLiente = dniCLiente;
+        this.saldoActual = saldoActual;
+    }
+
+    public int getNumeroCuenta() {
+        return numeroCuenta;
+    }
+
+    public void setNumeroCuenta(int numeroCuenta) {
+        this.numeroCuenta = numeroCuenta;
+    }
+
+    public long getDniCLiente() {
+        return dniCLiente;
+    }
+
+    public void setDniCLiente(long dniCLiente) {
+        this.dniCLiente = dniCLiente;
+    }
+
+    public double getSaldoActual() {
+        return saldoActual;
+    }
+
+    public void setSaldoActual(double saldoActual) {
+        this.saldoActual = saldoActual;
+    }
+
+    @Override
+    public String toString() {
+        return "Banco{" + "numeroCuenta=" + numeroCuenta + ", dniCLiente=" + dniCLiente + ", saldoActual=" + saldoActual + '}';
+    }
+     
+    
+}

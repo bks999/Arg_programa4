@@ -1,0 +1,77 @@
+h1 {
+    color: darkcyan;
+}
+
+p strong {
+    color: red;
+}
+
+.destacado {
+    color: orange;
+}
+
+h2 {
+    color: blue;
+}
+
+a {
+    color: red;
+}
+
+a em {
+    color: blue;
+}
+
+p .especial {
+    color: purple;
+}
+
+caption {
+    color: white;
+}
+table caption{
+    visibility: hidden;
+}
+ table, th, td {
+    border: 1px solid black;
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: black; */
+    border-collapse: collapse;
+}
+
+thead th {
+    color: orange;
+}
+
+tbody .especial {
+    color: orange;
+}
+
+tbody th {
+    color: red;
+}
+
+tfoot {
+    color: red;
+}
+
+tbody td{
+    color: green;
+}
+
+tbody strong {
+    color: orange;
+}
+
+#adicional {
+    color: olivedrab;
+}
+
+#especial {
+    color: magenta;
+}
+
+div a {
+    color: green;
+}

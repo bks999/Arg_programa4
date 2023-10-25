@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios-JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="recuadro">
+        <h1>EJERCICIOS-JAVASCRIPT</h1>
+    </div>
+    <br>
+<div class="recuadro1">
+    <div id="botones">
+        <a href="index.html#ejercicio1"><button type="button" class="btn l1">1</button></a>
+        <a href="index.html#ejercicio2"><button type="button" class="btn l1">2</button></a>
+        <a href="index.html#ejercicio3"><button type="button" class="btn l1">3</button></a>
+        <a href="index.html#ejercicio4"><button type="button" class="btn l1">4</button></a>
+        <a href="index.html#ejercicio5"><button type="button" class="btn l1">5</button></a>
+        <a href="index.html#ejercicio6"><button type="button" class="btn l1">6</button></a>
+        <a href="index.html#ejercicio7"><button type="button" class="btn l1">7</button></a>
+        <a href="index.html#ejercicio8"><button type="button" class="btn l1">8</button></a>
+        <a href="index.html#ejercicio9"><button type="button" class="btn l1">9</button></a>
+        <a href="index.html#ejercicio10"><button type="button" class="btn l1">10</button></a>
+        <a href="index.html#ejercicio11"><button type="button" class="btn l1">11</button></a>
+        <a href="index.html#ejercicio12"><button type="button" class="btn l1">12</button></a>
+        <a href="index.html#ejercicio13"><button type="button" class="btn l1">13</button></a>
+        <a href="index.html#ejercicio14"><button type="button" class="btn l1">14</button></a>
+        <a href="index.html#ejercicio15"><button type="button" class="btn l1">15</button></a>
+        <a href="index.html#ejercicio16"><button type="button" class="btn l1">16</button></a>
+        <a href="index.html#ejercicio17"><button type="button" class="btn l1">17</button></a>
+        <a href="index.html#ejercicio18"><button type="button" class="btn l1">18</button></a>
+        <a href="index.html#ejercicio19"><button type="button" class="btn l1">19</button></a>
+        <a href="index.html#ejercicio20"><button type="button" class="btn l1">20</button></a>
+        <a href="index.html#ejercicio21"><button type="button" class="btn l1">21</button></a>
+        <a href="index.html#ejercicio22"><button type="button" class="btn l1">22</button></a>
+        <a href="index.html#ejercicio23"><button type="button" class="btn l1">23</button></a>
+        <a href="index.html#ejercicio24"><button type="button" class="btn l1">24</button></a>
+        <a href="index.html#ejercicio25"><button type="button" class="btn l1">25</button></a>
+
+    </div>
+</div>
+<br>
+    <div class="ejercicios">
+        <div class="recuadro">
+            <div class="consigna" id="ejercicio1">
+                <p>1) ¿Cómo está el día de hoy? (soleado, nublado, lloviendo)</p>
+                <select name="clima" id="clima">
+                    <option value="soleado">soleado</option>
+                    <option value="nublado">nublado</option>
+                    <option value="lloviendo">lloviendo</option>
+                </select>
+            </div>
+            <div class="respuesta" id="ej1" onclick="clima()">Click para ver respuesta.</div>
+        </div>
+        <div class="recuadro">
+            <div class="consigna" id="ejercicio2">
+                <p>2) Ingrese el valor del radio de una circunferencia.</p>
+                <input type="text" id="radio" value="">
+                <button type="button" onclick="calculosRadio()">Ingresar</button>
+            </div>
+            <div class="respuesta" id="ej2"></div>
+        </div>
+        <div class="recuadro">
+            <div class="consigna" id="ejercicio3">
+                <p>3) ¿Cuantos años tienes?</p>
+                <input type="number" id="edad">
+                <button type="button" onclick="edadUsuario()">Listo!</button>
+            </div>
+            <div class="respuesta" id="ej3"></div>
+        </div>
+        <div class="recuadro">
+            <div class="consigna" id="ejercicio4">
+                <p>4) Escriba "S" o "N" en el recuadro.</p>
+                <input type="text" id="letra">
+                <button type="button" onclick="validarLetra()">Listo!</button>
+            </div>
+            <div class="respuesta" id="ej4"></div>
+        </div>
+        <div class="recuadro">
+            <div class="consigna" id="ejercicio5">
+                <p>5) Ingresa la inicial de la operación a realizar.</p>
+                <ul>
+                    <li>Sumar (S)</li>
+                    <li>Restar (R)</li>
+                    <li>Multiplicar (M)</li>
+                    <li>Dividir (D)</li>
+                </ul>
+                <form action="operacion">
+                <input type="text" id="operacion" onkeyup="validarOperacion()">
+                <br>
+                <p>Ingresa dos numeros</p>
+                <input type="number" id="num1"><span id="simbolo">  ?  </span><input type="number" id="num2"><button type="button" onclick="doOperacion()">Listo!</button><button type="reset">Limpiar</button>
+                </form>
+            </div>
+            <div class="respuesta" id="ej5"></div>
+        </div>
+        <div class="recuadro">
+            <div class="consigna" id="ejercicio6">
+                <p>6) Ingrese un numero</p>
+                <input type="number" id="num3"><button type="button" onclick="validarParImpar()">Listo!</button>
+            </div>
+            <div class="respuesta" id="ej6"></div>
+        </div>
+        <div class="recuadro">
+            <div class="consigna" id="ejercicio7">
+                <p>7) Ingresa un valor limite positivo</p>
+                <input type="text" name="" id="numLimPositivo" onclick="validarNumLimPositivo()"><span id="validarNumLimPositivo"></span>
+                <p>Ingresa varios numeros hasta llegar al limite ingresado</p> <button type="button" onclick="sumarNumerosEj7()">Comenzar!</button>
+            </div>
+            <div class="respuesta" id="ej7"></div>
+        </div>
+        <div class="recuadro">
+            <div class="consigna" id="">
+                <p></p>
+            </div>
+            <div class="respuesta" id=""></div>
+        </div>
+        <div class="recuadro">
+            <div class="consigna" id="">
+                <p></p>
+            </div>
+            <div class="respuesta" id=""></div>
+        </div>
+        <div class="recuadro">
+            <div class="consigna" id="">
+                <p></p>
+            </div>
+            <div class="respuesta" id=""></div>
+        </div>
+        <div class="recuadro">
+            <div class="consigna" id="">
+                <p></p>
+            </div>
+            <div class="respuesta" id=""></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+package POODos.Servicios;
+
+import POODos.Entidades.Persona;
+import java.util.Scanner;
+
+public class PersonaService {
+    
+    public boolean esMayorDeEdad(Persona p1){
+        boolean opt = false;
+        if(p1.getEdad()>=18){
+            opt = true;
+        }
+        return opt;
+    }    
+
+    public Persona crearPersona(){
+        Scanner ingreso = new Scanner(System.in);
+        
+        System.out.println("Ingrese su nombre: ");
+        String nombre = ingreso.next();
+        System.out.println("Ingrese su Edad: ");
+        byte edad = ingreso.nextByte();
+        String sexo;
+        do{
+            System.out.println("Ingrese su sexo Hombre(H)/Mujer(M)/Otro(O): ");
+            sexo = ingreso.next();
+        }while(!sexo.equalsIgnoreCase("m") || !sexo.equalsIgnoreCase("h") || !sexo.equalsIgnoreCase("o"));
+        System.out.println("Ingrese su peso: ");
+        float peso = ingreso.nextFloat();
+        System.out.println("Ingrese su altura: ");
+        float altura = ingreso.nextFloat();
+        
+        return new Persona(nombre,edad,sexo,peso,altura);
+    }
+    
+    public int calcularIMC(Persona p1){
+        int opt;
+        if(p1.getPeso()/Math.pow(p1.getAltura(), 2) < 20){
+            opt = -1;
+        }else if(p1.getPeso()/Math.pow(p1.getAltura(), 2) >= 20 && p1.getPeso()/Math.pow(p1.getAltura(), 2) <= 25 ){
+            opt = 0;
+        }else{
+            opt = 1;
+        }
+        return opt;
+    }
+}
+
+public class Persona {
+
+    private byte edad;
+    private String nombre,
+            sexo;
+    private float peso,
+            altura;
+
+    public Persona() {
+    }
+
+    public Persona(String nombre,byte edad, String sexo, float peso, float altura) {
+        this.edad = edad;
+        this.nombre = nombre;
+        this.sexo = sexo;
+        this.peso = peso;
+        this.altura = altura;
+    }
+
+    public byte getEdad() {
+        return edad;
+    }
+
+    public void setEdad(byte edad) {
+        this.edad = edad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public float getPeso() {
+        return peso;
+    }
+
+    public void setPeso(float peso) {
+        this.peso = peso;
+    }
+
+    public float getAltura() {
+        return altura;
+    }
+
+    public void setAltura(float altura) {
+        this.altura = altura;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Persona{");
+        sb.append("edad=").append(edad);
+        sb.append(", nombre=").append(nombre);
+        sb.append(", sexo=").append(sexo);
+        sb.append(", peso=").append(peso);
+        sb.append(", altura=").append(altura);
+        sb.append('}');
+        return sb.toString();
+    }
+}

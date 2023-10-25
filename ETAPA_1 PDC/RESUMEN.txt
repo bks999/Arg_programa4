@@ -1,0 +1,187 @@
+Resumen
+
+Dia 1
+
+PROGRAMACION= acto de programar/ organizar una secuencia de pasos ordenados a seguir para hacer cierta cosa/accion de crear programas
+
+PROGRAMAR=serie de instrucciones para la maquina, para el funcionamiento del programa.
+
+PARTES DEL PROGRAMA=lenguaje de programacion y algoritmos
+
+LENGUAJE DE PROGRAMACION=lenguaje formal que le permite al programador escribir conjunto de ordenes, acciones consecutivas, datos y algoritmos para RESOLVER PROBLEMAS.
+
+TIPOS DE LENGUAJES DE PROGRAMACION:
+	LENGUAJE MAQUINA=es el mas primitivo, coleccion de digitos binarios o bits
+	LENGUAJE DE ALTO NIVEL=este es de facil uso para el programador y es traducido a lenguaje de maquina mediante traductores o compiladores.
+
+-----------------------
+
+ALGORITMO = son las instrucciones que le vamos a dar a nuestro programa/es un metodo para darle instrucciones a nuestro programa y resolver un problema/ consiste en la realizacion de un conjunto de pasos logicamente ordenados para llegar a ciertos resultados(solucion del problema)
+
+CARACTERISTICAS DEL ALGORITMO= es independiente del leng. de progr. y la computadora. Aunque se ejecute en otra computadora siempre sera el mismo. (analogia, receta de cocina)
+
+CARACTERISTICAS FUNDAMENTALES DE LOS ALGORITMOS
+- PRECISO
+- DEFINIDO
+- FINITO (inicio y final, pasos finitos)
+- CORRECTO (llegamos al resultado esperado_
+- INDEPENDIENTE (del lenguaje de programacion y de la computadora)
+
+TRES ELEMENTOS DEL ALGORITMO:
+-DATOS DE ENTRADA O INFORMACION DE ENTRADA
+-PROCESOS
+-INFORMACION DE SALIDA
+
+DIAGRAMA DE FLUJO representa la esquematizacion grafica de un algoritmo, muestra graficamente los pasos o procesos para la solucion del problema.
+
+PROGRAMA, es donde se ve reflejados el lenguaje de programacion y algoritmos, los resultados.
+Es una serie de algoritmos escritos en algun lenguaje de programacion de computadoras. Conjunto de instrucciones
+
+ESPECIFICACIONES DEL PROGRAMA (entrada, salida y algoritmos de resolucion)
+-SECUENCIAL(lineal)
+-NO LINEAL
+
+CODIFICACION, operacion de escribir la solucion del problema, serie de instrucciones detalladas. en un codigo reconocible por la computadora.
+
+COMPONENTES DEL ALGORITMO
+-CABECERA DE PROGRAMA: contiene la palabra reservada que seniale el lenguaje(ej Algoritmo)
+-BLOQUE ALGORITMO: tiene a la vez dos componentes
+	-acciones de declaraciones: se declaran las variables con nombre
+	-acciones ejecutables:
+
+ELEMENTOS DE UN PROGRAMA
+-IDENTIFICADORES: conj. de caracteres alfanumericos para identificar las entidades del programa (nombre del programa, nombres de variables, constantes, subprogramas, etc.). Tambien se usa camelCase.
+-VARIABLES: guardan informacion, van a contar con un identificador para poder distinguirse. En caso de las variables, su informacion necesariamente puede cambiar durante la ejecucion del programa.
+-CONSTANTES: guardan informacion, van a contar con un identificador para poder distinguirse. En caso de las constantes, su informacion no cambia.
+-OPERADORES
+-PALABRAS RESERVADAS (Aparecen en color azul. Algoritmo, FinAlgoritmo,Definir,etc)
+
+TIPO DE DATOS
+-ENTERO, REAL, CARACTER, LOGICO, CADENA
+(cadena y caracter son terminos equivalentes, no genera error, el plural de caracter es Caracteres o Cadena)
+
+TIPOS DE INSTRUCCIONES
+-INST. DE INICIO/FIN: para delimitar bloques de codigo.
+-INST. DE ESCRITURA O SALIDA: para escribir o mostrar mensajes o contenidos de las variables en un dispositivo de salida (monitor). Se ultiliza la palabra [Escribir]
+
+INSTRUCCIONES DE LECTURA
+-Las operaciones de entrada permiten leer datos de un dispositivo de entrada y asignarlos a determinadas variables. La instruccion Leer permite ingresar informacion por teclado al usuario.
+
+OPERADORES
+Este pseudolenguaje dispone de un conjunto basico de operadores que pueden ser utilizados para la construccion de expresiones mas o menos complejas.
+-ALGEBRAICOS(O ARITMETICOS):suma,resta,multiplicacion,division, potenciacion(^), modulo(MOD o %):resto de la division entera). Son binarias porque admiten dos operandos.
+
+-REGLAS DE PRIORIDAD
+	1.Las operaciones que estan encerradas entre parentesis se evaluan primero.
+	2.Las operaciones aritmeticas dentro de una expresion siguen este orden de prioridad
+		-operador()
+		-operadores unitarios(potenciacion)
+		-operadores * / %
+		-operadores + -
+	De izquierda a derecha(asociatividad)
+
+ESTRUCTURAS DE CONTROL: determina el orden en que se recorren las instrucciones
+	-ESTRUCTURAS SECUENCIALES: la salida de una es la entrada de la que sigue
+
+	-ESTRUCTURAS SELECTIVAS O DE DECISION: son utilizadas para tomar decisiones logicas, se realiza una evaluacion de una condicion y de acuerdo al resultado, el algoritmo realiza una determinada accion.
+		Una condicion es toda sentencia que determina su verdad o falsedad. Se pueden usar variables logicas.
+		-SIMPLES: SI
+		-DOBLE: SI - SINO
+		-MULTIPLES: SEGUN - SI Anidado
+
+	-ESTRUCTURAS REPETITIVAS: se utilizan BUCLES, y se denomina ITERACION al hecho de repetir la ejecucion de una secuencia de acciones. Todo bucle tiene que llevar asociada una condicion, que es la que va a determinar cuando se repite el bucle y cuando deja de repetirse.
+
+		-MIENTRAS: el bucle se repite siempre que se cumpla una condicion. Si condion=V se ejecuta, al contrario, no se ejecuta. Se repite mientras la condicion sea V.
+
+		-HACER- MIENTRAS QUE/HASTA QUE se ejecuta siempre al menos una vez, ya que la condicion logica se escribe al final del bucle. En caso de Mientras que, se termina de ejecutar cuando el valor de la condicion es falso, en Hasta que, hasta que sea verdadero.
+
+		-PARA: ejecuta un conjunto de acciones. Contiene tres componentes:
+			-Inicializacion: variable indice, y acciones se ejecutan x cantidad de veces, hasta valor indice= valor final
+			-Finalizacion
+			-Incremento
+
+		-BUCLES ANIDADOS: bucle dentro de otro bucle.
+
+OPERADORES RELACIONALES: simbolos para comparar dos valores. (> < == >= <= <>)
+OPERADORES LOGICOS: Y O NO/no ----> no(V)=F / no(F)=V
+-REGLAS DE PRIORIDAD:
+	-operador()
+	-operador no
+	-operador y
+	-operador o
+
+SUBPROGRAMAS: Son de disenio descendente, se divide el problema principal en subproblemas ( mas sensillos) y estos en otros mas simples, para que sean mas faciles de resolver. Los subproblemas son independientes entres si.
+
+VARIABLES LOCALES
+	Esta declarada y definida dentro de un subprograma, en el sentido de que esta dentro de ese subprograma, es distinta de las variables con el mismo nombre declaradas en cualquier parte del programa principal y son variables a las que el algoritmo principal no puede acceder de manera directa.
+
+VARIABLES GLOBALES
+	es aquella que esta declarada en el programa o algoritmo principal, del que dependen todos los subprogramas y a las que pueden acceder los subprogramas, a traves del paso de argumento.	
+
+COMUNICACION CON SUBPROGRAMAS: PASO DE ARGUMENTOS
+Cuando un programa llama a un subprograma, la informacion se comunica a traves de la lista de parametros y se establece una correspondencia automatica entre los parametros y los argumentos. Los parametros son ¡°sustituidos¡± o ¡°utilizados¡± en lugar de los argumentos.
+
+	-PASO POR VALOR: Los parametros (locales a la funcion o procedimiento) reciben como valores iniciales una copia de los valores de los argumentos y con ello se ejecutan las acciones descritas en el subprograma. Este tipo de intercambio tiene una limitacion: los cambios que se produzcan dentro del subprograma no producen cambios en los argumentos originales, no se pueden poner argumentos como valores de retorno. El argumento actual no puede modificarse por el subprograma. (por defecto/default)
+	
+	-PASO POR REFERENCIA: el programa que LLAMA pasa al subprograma la direccion del argumento actual. Es una referencia a la posicion de memoria. El argumento real es compartido, es decir, se puede modificar directamente por el subprograma. Los argumentos son de entrada/salida y  se llaman ARGUMENTOS VARIABLES.
+
+
+FUNCIONES
+Es una operacion que toma uno o mas valores(argumentos) y produce un resultado. Se invocan por su nombre.
+	-Palabra reservada: Funcion, FinFuncion
+	-Cabecera: nombre de la funcion
+	-Valor devuelto(Variable de retorno): sera una variable que definiremos en el cuerpo de la funcion, con tipo de dato. 	
+	-Cuerpo: acciones
+
+Los PARAMETROS van a ser los datos que necesitamos que nos envie el algoritmo para realizar el subproblema en cuestion. Podemos tener una funcion sin parametros.
+El algoritmo o programa llama o invoca a la funcion con el nombre de esta ultima en una expresion seguida de una lista de argumentos que deben coincidir en cantidad, tipo y orden con los parametros de la funcion.
+
+Se denominan ARGUMENTOS a las variables o valores declarados en el algoritmo. Cuando se realiza una llamada a la funcion, los "valores" pasados o enviados a la funcion se denominan ARGUMENTOS.
+
+CINCO COMPONENTES IMPORTANTES DE LA FUNCION
+1. IDENTIFICADOR: nombre de la funcion
+2. PARAMETROS
+3. ARGUMENTOS
+4. ACCIONES DE LA FUNCION
+5. VALOR DE RETORNO: se devuelve un UNICO VALOR
+
+
+PROCEDIMIENTOS(SUBPROCESOS)
+son similares a las funciones, pero no devuelven ningun valor, solo realizan una tarea.
+Es un subprograma que ejecuta un proceso especifico. En pseint se llama SUBPROCESO. Cuando se invoca el procedimiento, los pasos que lo definen se ejecutan y a continuacion se devuelve el control al programa que le llamo.
+
+
+ARREGLOS( ARRAYS)
+Los arreglo es un conjunto FINITO(una vez definido su tamanio, este no puede cambiar) y ORDENADO(significa que sus elementos estan ordenados y pueden ser identificados por su posicion) de elementos HOMOGENEOS(los elementos son del mismo tipo).
+
+
+VECTOR: es un arreglo unidimensional de n elementos. Cada posicion de los elementos corresponden a sus subindices.
+*Los arreglos se pueden pasar como parametros a un subprograma, pasan siempre POR REFERENCIA.
+
+MATRIZ: se considera como vector de vectores. Es un conjunto de elementos, todos del mismo tipo. Se necesita especificar dos subindices para identificar cada elemento del arreglo. FILAS Y COLUMNAS. (el vector seria como una columna de datos)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+body {
+    background-color: lavenderblush;
+}
+.recuadro {
+    border: 2px solid rosybrown;
+    border-radius: 15px;
+    display: flexbox;
+    justify-content: center;
+    margin: 3%;
+    background-color: mistyrose;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+#botones {
+    border: none;
+    margin: 3rem 2rem 2rem;
+    background-color: none;
+}
+
+.btn {
+    background-color: #ca90d8; /* Green */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 0.7rem 1rem;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    
+}
+
+.respuesta{
+    font-size: medium;
+    font-family: sans-serif;
+    text-align: justify;
+    padding: 0rem 2rem 4rem 2rem;
+}
+
+.consigna {
+    font-weight: bold;
+    padding: 2rem 2rem 1rem 2rem;
+    font-size: medium;
+    font-family: sans-serif;
+    text-align: justify;
+}

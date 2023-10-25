@@ -1,0 +1,69 @@
+public class Libro { //AL SER PRIVADOS PARA MODIFICARLOS UTILIZO EL METODO SET
+    private int ISBN;
+    private String titulo;
+    private String autor;
+    private int numeroDePaginas;
+
+    public Libro(){ //constructor NULO
+        
+    }
+    public Libro(int ISBN, String titulo, String autor, int numeroDePaginas) { //constructor con todos los atributos pasados por parametro
+        this.ISBN = ISBN;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.numeroDePaginas = numeroDePaginas;
+    }
+
+
+    //GETTERS - PARA OBTENER ATRIBUTOS
+    public int getISBN() {
+        return ISBN;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public int getNumeroDePaginas() {
+        return numeroDePaginas;
+    }
+
+    // Metodo para cargar un libro pidiendo los datos al usuario
+    public void cargarLibro() {
+        Scanner leer = new Scanner(System.in);
+        System.out.print("INGRESE EL ISBN DEL LIBRO: ");
+        this.ISBN = leer.nextInt();
+        System.out.print("INGRESE EL TITULO DEL LIBRO: ");
+        this.titulo = leer.next();
+        System.out.print("INGRESE EL AUTOR DEL LIBRO: ");
+        this.autor = leer.next();
+        System.out.print("INGRESE EL NRO DE PAGINAS DEL LIBRO: ");
+        this.numeroDePaginas= leer.nextInt();
+    }
+    @Override
+    public String toString() { //PARA RETORNAR LA REPRESENTACION EN LA CONSOLA DEL OBJETO
+        return "Libro:" + "ISBN:" + ISBN + ", titulo:" + titulo + ", autor:" + autor + ", numeroDePaginas:" + numeroDePaginas + '}';
+    }
+    
+    
+}
+
+
+public static void main(String[] args) {
+        //desde aca realizo todas las invocaciones a los metodos
+        
+    //generar el libro seria
+        Libro libro1 = new Libro();//con el constructor vacio
+        libro1.cargarLibro();
+        libro1.toString();
+        System.out.println(libro1.toString());
+
+        Libro libro2 = new Libro(12345, "EL CUENTO DE LA CRIADA", "MARGARET ATWOOD", 863);
+        libro2.toString();
+        System.out.println(libro2.toString());
+    }
+}

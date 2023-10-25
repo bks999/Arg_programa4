@@ -1,0 +1,69 @@
+package service;
+
+import entidades.Cafetera;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Fede
+ */
+public class Cafeteraservice {
+
+    Cafetera c1 = new Cafetera();
+
+    public double llenarCafetera() {
+        System.out.println("llenando cafetera");
+        c1.setCapacidadMax(200);
+        c1.setCantidadActual(200);
+        return c1.getCantidadActual();
+    }
+
+    public double servirTaza() {
+        Scanner read = new Scanner(System.in);
+        int taza;
+        int aux=0;
+        String v="";
+        System.out.println("quiere tomar una taza?");
+        do {
+            
+             if (aux==0 && v.equals("si")) {
+                 System.out.println("quiere una taza");
+            }else{
+                 System.out.println("quiere tomar otra taza");
+             }
+             v=read.next();
+            System.out.println("ingrese el tamano de la taza \n"
+                    + "1 - 50ml\n"
+                    + "2 - 60ml\n"
+                    + "3 - 100ml");
+            taza = read.nextInt();
+            c1.getCantidadActual();
+            switch (taza) {
+                case 1:
+
+                    c1.setCantidadActual(-50);
+                        
+                    break;
+                case 2:
+                    c1.setCantidadActual(-60);
+                    break;
+                case 3:
+                    c1.setCantidadActual(-100);
+                    break;
+                default:
+                    throw new AssertionError();
+            }
+        } while (taza != 1 && taza != 2 && taza != 3);
+        
+    }
+    
+    public double vaciarCafetera(){
+        c1.setCantidadActual(0);
+        return c1.getCantidadActual();
+    }
+    public void agregarCafe(){
+        int aux=0;
+        System.out.println("ingrese la cantidad de cafe que desee ingresar a la cafetera");
+        aux=read.nextInt;
+    }
+}

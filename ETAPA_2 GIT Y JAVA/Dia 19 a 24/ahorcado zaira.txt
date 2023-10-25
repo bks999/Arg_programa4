@@ -1,0 +1,32 @@
+if (buscarLetra(a,palabra)){
+        return true;
+        }
+        
+        boolean s = false;
+        int letraRest = largo;
+        int enc = 0;
+        int noenc = 0;
+        do {
+            System.out.println("------------------------------------------");
+            System.out.println(" Ingresa la letra que piensas tiene la palabra: ");
+            char letra = leer.next().charAt(0);
+            String[] aux = a.getPalabraABuscar();
+            for (int i = 0; i < largo; i++) {
+
+                if (aux[i].equals(letra)) {
+                    enc++;
+                    s = true;
+                }
+            }
+            if (s == true) {
+                letraRest -= enc;
+                System.out.println("Se encontraron " + enc + " ,faltan: " + letraRest);
+            } else {
+                a.setJugadasMax(a.getJugadasMax() - 1);
+                s = false;
+                System.out.println("No se encontro la letra");
+
+            }
+            System.out.println(" Oportunidad restantes " + a.getJugadasMax());
+        } while (a.getJugadasMax() > 0);
+        return false;
